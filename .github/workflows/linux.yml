@@ -23,6 +23,6 @@ jobs:
         zip -vr ptk_v2.5.4_crossplatform.zip *
     - uses: ncipollo/release-action@v1
       with:
-        artifact: release/distrib/ptk_v2.5.4_crossplatform.zip
+        artifacts: release/distrib/ptk_v2.5.4_crossplatform.zip
         token: ${{ secrets.GITHUB_TOKEN }}    
 
