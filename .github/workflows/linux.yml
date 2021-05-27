@@ -17,10 +17,10 @@ jobs:
       run: apt-cache search libsdl && sudo apt-get install libsdl1.2-dev libjack-dev -y 
     - name: make
       run: make -f makefile.linux
-    - name: zip linux
-      run:
-        - cd release/distrib
-        - zip -vr ptk_v2.5.4_linux_win32.zip *
+    - name: make zip
+      run: >
+        cd release/distrib
+        zip -vr ptk_v2.5.4_linux_win32.zip *
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v2.2.3
       with:
