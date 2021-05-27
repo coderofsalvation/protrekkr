@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: install deps
-      run: apt-cache search libsdl && apt-get install libsdl1.2-dev -y 
+      run: apt-cache search libsdl && sudo apt-get install libsdl1.2-dev -y 
     - name: make
       run: make -f makefile.linux
     - name: zip linux
